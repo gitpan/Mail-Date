@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.02'; # 2003-03-09
+our $VERSION = '0.03'; # 2003-03-10
 
 use Carp;
 
@@ -12,7 +12,7 @@ sub rfc2822 {
 	my ($class, $universal_time, $timezone) = @_;
 	my $self = $class->new();
 	$self->convert($universal_time, $timezone);
-	return $$self{'date_time'};
+	return $self->output();
 }
 
 sub new {
@@ -20,6 +20,11 @@ sub new {
 	my $self = {};
 	bless $self, $class;
 	return $self;
+}
+
+sub output {
+	my $self = shift;
+	return $$self{'date_time'};
 }
 
 sub convert {
@@ -93,6 +98,10 @@ Just creates a new object.
 =item convert($machine_time, $timezone)
 
 Just converts from machine time to date-time string.
+
+=item output()
+
+Just output the converted date-time string.
 
 =back
 

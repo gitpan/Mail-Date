@@ -1,5 +1,9 @@
 Revision history for Perl extension Mail::Date.
 
+0.03  2003-03-10 17:16:36 
+	- add a new method output().
+	- the test code was integrated.
+
 0.02  2003-03-09 01:15:34 
 	- a variable name and README were changed.
 
