@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.06'; # 2003-03-12
+our $VERSION = '0.06_01'; # 2003-03-12
 
 use Carp;
 
@@ -93,7 +93,7 @@ Please consult RFC2822 (section 3.3, 4.3) for the futher infomation.
 
 =item rfc2822($machine_time [, $timezone])
 
-Returns RFC2822 compliant date-time string which is converted from machine time. Though $timezone value is optional, it is said that in the RFC2822 `B<The date and time-of-day SHOULD express local time>'. If $timezone value is not given, it will be not taken as a localtime but as a Universal Time (UTC).
+Returns RFC2822 compliant date-time string which is converted from machine time. Though $timezone value is optional, it is said that in the RFC2822 `B<The date and time-of-day SHOULD express local time>'. If $timezone value is not given, it will be not taken as a local time but as a Universal Time (UTC).
 
 The time zone expression should be compliant to the RFC2822 specification. It must be within the range -9959 through +9959. The "+" or "-" indicates whether the time-of-day is ahead of (i.e., east of) or behind (i.e., west of) Universal Time. The first two digits indicate the number of hours difference from Universal Time, and the last two digits indicate the number of minutes difference from Universal Time. (Hence, +hhmm means +(hh * 60 + mm) minutes, and -hhmm means -(hh * 60 + mm) minutes). The form "+0000" should be used to indicate a time zone at Universal Time.
 
