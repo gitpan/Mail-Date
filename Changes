@@ -1,5 +1,12 @@
 Revision history for Perl extension Mail::Date.
 
+0.07  2003-04-06 16:36:22 
+	- interface has been changed critically.
+	  abolish OOP. now it is simply as a function.
+	  its name of the function has been also modified.
+	- improved POD documentation.
+	- improved test script.
+
 0.06  2003-03-12 22:12:42 
 	- Universal Time mode ('-0000') was added.
 

@@ -1,6 +1,6 @@
-Changes
-Date.pm
-Makefile.PL
-MANIFEST
-README
-t/1.t
+Changes 	for the revision histories
+Date.pm 	convert to RFC2822 compliant date-time
+Makefile.PL	writes the Makefile
+MANIFEST	(this file)
+README  	for the short descriptions about install
+t/1.t   	test script for the Mail::Date

@@ -1,7 +1,7 @@
-Mail::Date version 0.06
+Mail::Date version 0.07
 ======================
 
- This module generates a rfc2822 compliant email date-time string.
+ This module is used for conversion to RFC2822 compliant date-time.
 
 INSTALLATION
 
@@ -11,6 +11,14 @@ INSTALLATION
    make
    make test
    make install
+
+DEPENDENCIES
+
+ This module requires perl5.8 or later.
+ And,
+ this module requires these other modules and libraries:
+
+   Exporter
 
 COPYRIGHT AND LICENCE
 
