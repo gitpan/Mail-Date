@@ -1,4 +1,4 @@
-Changes 	for the revision histories
+Changes 	for the revision history
 Date.pm 	convert to RFC2822 compliant date-time
 Makefile.PL	writes the Makefile
 MANIFEST	(this file)

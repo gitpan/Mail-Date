@@ -5,13 +5,13 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '0.08_02'; # 2003-04-08 (since 1999)
+our $VERSION = '0.08'; # 2003-04-18 (since 1999)
 
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(datetime_rfc2822);
 
-sub datetime_rfc2822 {
+sub datetime_rfc2822 ($;$) {
 	my($universal_time, $timezone) = @_;
 	
 	unless ($timezone) {
