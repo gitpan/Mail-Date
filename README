@@ -1,4 +1,4 @@
-Mail::Date version 0.08
+Mail::Date version 0.09
 =======================
 
  This module is used for conversion to RFC2822 compliant date-time.
@@ -14,7 +14,7 @@ INSTALLATION
 
 DEPENDENCIES
 
- This module requires perl5.8 or later.
+ This module requires perl5.6 or later.
  And,
  this module requires these other modules and libraries:
 

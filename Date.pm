@@ -1,11 +1,11 @@
 package Mail::Date;
 
-use 5.008;
+use 5.006;
 use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '0.08'; # 2003-04-18 (since 1999)
+our $VERSION = '0.09'; # 2003-08-12 (since 1999)
 
 require Exporter;
 our @ISA = qw(Exporter);

@@ -1,5 +1,8 @@
 Revision history for Perl extension Mail::Date.
 
+0.09  2003-08-12 11:53:40 JST
+	- Modification about backward compatibility with Perl5.6.
+
 0.08  2003-04-18 13:21:26 JST
 	- Added prototype to the function.
 	- POD was modified.
