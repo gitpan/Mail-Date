@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.03'; # 2003-03-10
+our $VERSION = '0.04'; # 2003-03-10
 
 use Carp;
 
@@ -107,7 +107,13 @@ Just output the converted date-time string.
 
 =head1 SEE ALSO
 
-L<HTTP::Date>
+=over
+
+=item RFC2822 L<http://www.ietf.org/rfc/rfc2822.txt>
+
+=item L<HTTP::Date>
+
+=back
 
 =head1 AUTHOR
 
