@@ -1,5 +1,8 @@
 Revision history for Perl extension Mail::Date.
 
+0.08_01  2003-04-08 10:57:55 
+	- POD was modified.
+
 0.07  2003-04-06 16:36:22 
 	- interface has been changed critically.
 	  abolish OOP. now it is simply as a function.

@@ -1,4 +1,4 @@
-Mail::Date version 0.07
+Mail::Date version 0.08_01
 ======================
 
  This module is used for conversion to RFC2822 compliant date-time.
