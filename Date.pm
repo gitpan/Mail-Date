@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.05'; # 2003-03-11
+our $VERSION = '0.06'; # 2003-03-12
 
 use Carp;
 
@@ -29,6 +29,10 @@ sub output {
 
 sub convert {
 	my ($self, $universal_time, $timezone) = @_;
+	
+	unless ($timezone) {
+		$timezone = '-0000';
+    }
 	
 	unless ($timezone =~ /^[\+\-]\d{4}$/) {
 		croak 'Invalid timezone expression: it must be in the format like +hhmm or -hhmm';
@@ -77,19 +81,21 @@ Here it is rfc2822 compliant email date-time string generator. The well-known RF
 
  Thu, 06 Mar 2003 19:14:05 GMT
 
-any more. Instead of that you should use the local time in such a format +hhmm or -hhmm like:
+any more. Although it is RFC822 compliant but RFC2822 compliant. Instead of that, you should use the local time in such a format +hhmm or -hhmm like:
 
  Fri, 07 Mar 2003 04:14:05 +0900
 
-Please refer to RFC2822 (section 3.3, 4.3) for the futher infomation.
+Please consult RFC2822 (section 3.3, 4.3) for the futher infomation.
 
 =head1 METHODS
 
 =over
 
-=item rfc2822($machine_time, $timezone)
+=item rfc2822($machine_time [, $timezone])
 
-Returns rfc2822 compliant date-time string which is converted from machine time. The time zone expression should be compliant to the RFC2822 specification. The "+" or "-" indicates whether the time-of-day is ahead of (i.e., east of) or behind (i.e., west of) Universal Time. The first two digits indicate the number of hours difference from Universal Time, and the last two digits indicate the number of minutes difference from Universal Time. (Hence, +hhmm means +(hh * 60 + mm) minutes, and -hhmm means -(hh * 60 + mm) minutes). The form "+0000" should be used to indicate a time zone at Universal Time. It must be within the range -9959 through +9959.
+Returns RFC2822 compliant date-time string which is converted from machine time. Though $timezone value is optional, it is said that in the RFC2822 `B<The date and time-of-day SHOULD express local time>'. If $timezone value is not given, it will be not taken as a localtime but as a Universal Time (UTC).
+
+The time zone expression should be compliant to the RFC2822 specification. It must be within the range -9959 through +9959. The "+" or "-" indicates whether the time-of-day is ahead of (i.e., east of) or behind (i.e., west of) Universal Time. The first two digits indicate the number of hours difference from Universal Time, and the last two digits indicate the number of minutes difference from Universal Time. (Hence, +hhmm means +(hh * 60 + mm) minutes, and -hhmm means -(hh * 60 + mm) minutes). The form "+0000" should be used to indicate a time zone at Universal Time.
 
 =item new()
 

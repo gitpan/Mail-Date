@@ -1,5 +1,8 @@
 Revision history for Perl extension Mail::Date.
 
+0.06  2003-03-12 22:12:42 
+	- Universal Time mode ('-0000') was added.
+
 0.05  2003-03-11 16:27:39 
 	- modified POD only.
 

@@ -1,4 +1,4 @@
-Mail::Date version 0.05
+Mail::Date version 0.06
 ======================
 
  This module generates a rfc2822 compliant email date-time string.
