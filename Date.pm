@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use Carp;
 
-our $VERSION = '0.08_01'; # 2003-04-08 (since 1999)
+our $VERSION = '0.08_02'; # 2003-04-08 (since 1999)
 
 require Exporter;
 our @ISA = qw(Exporter);
@@ -79,9 +79,9 @@ Please consult RFC2822 (section 3.3, 4.3) for the actual infomation.
 
 =over
 
-=item datetime_rfc2822($machine_time [, $timezone])
+=item datetime_rfc2822($unix_time [, $timezone])
 
-This function returns RFC2822 compliant date-time string which is converted from a unix-machine-time (offset in seconds from the unix epoch 1970-01-01 00:00:00 UTC). Though $timezone value is optional, it is said that in the RFC2822 I<The date and time-of-day SHOULD express local time>. If $timezone value is not given (omitted), it will be not taken as a local-time but as a universal-time (UTC) to be expressed C<-0000>.
+This function returns RFC2822 compliant date-time string which is converted from a C<$unix_time> which is offset in seconds from the unix epoch time (1970-01-01 00:00:00 UTC). Though $timezone value is optional, it is said that in the RFC2822 I<The date and time-of-day SHOULD express local time>. If $timezone value is not given (omitted), it will be not taken as a local-time but as a universal-time (UTC) to be expressed C<-0000>.
 
 The time zone expression should be compliant to the RFC2822 specification. It must be within the range -9959 through +9959. The "+" or "-" indicates whether the time-of-day is ahead of (i.e., east of) or behind (i.e., west of) Universal Time. The first two digits indicate the number of hours difference from Universal Time, and the last two digits indicate the number of minutes difference from Universal Time. (Hence, +hhmm means +(hh * 60 + mm) minutes, and -hhmm means -(hh * 60 + mm) minutes). The form "+0000" should be used to indicate a time zone at Universal Time.
 
