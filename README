@@ -1,11 +1,11 @@
-Mail::Date version 0.04
+Mail::Date version 0.05
 ======================
 
-This module generates a rfc2822 compliant email date-time string.
+ This module generates a rfc2822 compliant email date-time string.
 
 INSTALLATION
 
-To install this module type the following:
+ To install this module type the following:
 
    perl Makefile.PL
    make
@@ -14,6 +14,7 @@ To install this module type the following:
 
 COPYRIGHT AND LICENCE
 
-Copyright (c) 1999-2003 Masanori HATA. All rights reserved.
+ Copyright (c) 1999-2003 Masanori HATA. All rights reserved.
 
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+ This program is free software; you can redistribute it and/or
+ modify it under the same terms as Perl itself.

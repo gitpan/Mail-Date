@@ -1,7 +1,10 @@
 Revision history for Perl extension Mail::Date.
 
+0.05  2003-03-11 16:27:39 
+	- modified POD only.
+
 0.04  2003-03-10 18:19:17 
-	- POD was changed.
+	- modified POD only.
 
 0.03  2003-03-10 17:16:36 
 	- add a new method output().

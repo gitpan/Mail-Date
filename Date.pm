@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.04'; # 2003-03-10
+our $VERSION = '0.05'; # 2003-03-11
 
 use Carp;
 
@@ -109,9 +109,9 @@ Just output the converted date-time string.
 
 =over
 
-=item RFC2822 L<http://www.ietf.org/rfc/rfc2822.txt>
+=item RFC2822: L<http://www.ietf.org/rfc/rfc2822.txt>
 
-=item L<HTTP::Date>
+=item L<HTTP::Date> (RFC822 compliant date-time)
 
 =back
 
