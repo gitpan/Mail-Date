@@ -4,7 +4,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.01'; # 2003-03-07
+our $VERSION = '0.02'; # 2003-03-09
 
 use Carp;
 
@@ -45,8 +45,8 @@ sub convert {
 	$mon  = qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)[$mon];
 	$wday = qw(Sun Mon Tue Wed Thu Fri Sat)[$wday];
 	
-	foreach my $number ($mday, $hour, $min, $sec) {
-		$number = sprintf("%02d", $number);
+	foreach my $digit ($mday, $hour, $min, $sec) {
+		$digit = sprintf("%02d", $digit);
 	}
 	
 	$$self{'date_time'} = "$wday, $mday $mon $year $hour:$min:$sec $timezone";
@@ -59,7 +59,7 @@ __END__
 
 =head1 NAME
 
-Mail::Date - RFC2822 compliant email date-time
+Mail::Date - generates RFC2822 compliant date-time
 
 =head1 SYNOPSIS
 
